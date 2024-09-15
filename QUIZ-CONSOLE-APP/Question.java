@@ -8,7 +8,6 @@ public class Question {
     private String opt4;
     private String answer;
 
-
     public Question(int id, String question, String opt1, String opt2, String opt3, String opt4, String answer) {
         this.id = id;
         this.question = question;
@@ -75,7 +74,6 @@ public class Question {
         this.answer = answer;
     }
 
-
     @Override
     public String toString() {
         return "Question{" +
@@ -88,7 +86,6 @@ public class Question {
                 ", answer='" + answer + '\'' +
                 '}';
     }
-
 
     public String getAllOptions() {
         return 
