@@ -1,4 +1,5 @@
 public class Question {
+
     private int id;
     private String question;
     private String opt1;
@@ -86,5 +87,11 @@ public class Question {
                 ", opt4='" + opt4 + '\'' +
                 ", answer='" + answer + '\'' +
                 '}';
+    }
+
+
+    public String getAllOptions() {
+        return 
+         "opt1= " + opt1 + "  opt2= " + opt2 + "  opt3= " + opt3 + "  opt4= " + opt4 ;
     }
 }

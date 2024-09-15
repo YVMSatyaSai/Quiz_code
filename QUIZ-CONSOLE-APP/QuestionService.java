@@ -20,21 +20,29 @@ public class QuestionService {
         for (Question q : questions) {
             System.out.println("Question no. : " + q.getId());
             System.out.println(q.getQuestion());
-            System.out.println(q.getOpt1());
-            System.out.println(q.getOpt2());
-            System.out.println(q.getOpt3());
-            System.out.println(q.getOpt4());
+
+            System.out.println(q.getAllOptions());
+            
+            // System.out.println(q.getOpt1());
+            // System.out.println(q.getOpt2());
+            // System.out.println(q.getOpt3());
+            // System.out.println(q.getOpt4());
             Scanner sc = new Scanner(System.in);
             selection[i] = sc.nextLine();
             i++;
 
         }
 
-        for (String s : selection) {
-            System.out.println(s);
-        }
+        System.out.println("");
+
+        // System.out.println("your answer's ");
+        // for (String s : selection) {
+        //     System.out.println(s);
+        // }
 
     }
+
+            // System.out.println("");
 
     public void printScore() {
         int score = 0;
@@ -42,10 +50,15 @@ public class QuestionService {
             Question que = questions[i];
             String answer = que.getAnswer();
             String userAnswer = selection[i];
-            if (answer.equals(userAnswer)) {
+
+            if (answer.equals(userAnswer)){
+                System.out.println("Question no. " + i + " :- your answer '" + userAnswer + "' is correct.");
                 score++;
             }
+            else
+                System.out.println("Question no. " + i + " :- correct anwser is '" + answer + "'");
         }
+        System.out.println("");
         System.out.println("Your score is : " + score);
     }
 }
